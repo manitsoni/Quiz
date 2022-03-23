@@ -1,0 +1,44 @@
+<div nz-row [nzGutter]="24" style="padding: 15px;">
+    <div nz-col nzXs="24" nzSm="24" nzMd="8" mzLg="8" nzXl="8" style="width: 100%;"></div>
+    <div nz-col nzXs="24" nzSm="24" nzMd="8" mzLg="8" nzXl="8" style="width: 100%;">
+        <h2 style="text-align: center;">Registration form</h2>
+        <form nz-form [formGroup]="userForm" class="login-form">
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please input your name">
+                    <nz-input-group>
+                        <input type="text" formControlName="Name" nz-input placeholder="Enter name" #name/>
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please choose gender">
+                    <nz-radio-group nzName="radiogroup" formControlName="Gender">
+                        <label nz-radio nzValue="Male">Male</label>
+                        <label nz-radio nzValue="Female">Female</label>
+                    </nz-radio-group>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please select language">
+                    <nz-select nzPlaceHolder="Select language" formControlName="Language">
+                        <nz-option nzLabel="English" nzValue="english"></nz-option>
+                        <nz-option nzLabel="हिन्दी" nzValue="Hindi"></nz-option>
+                    </nz-select>
+                </nz-form-control>
+            </nz-form-item>
+            <button nz-button class="login-form-button login-form-margin" [disabled]="(name.value.length === 0)" (click)="saveUser()" [nzType]="'primary'">Register</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .login-form-button {
+        width: 100%
+    }
+    
+    .inner-content {
+        background: #fff;
+        padding: 24px;
+        height: 950px;
+    }
+</style>

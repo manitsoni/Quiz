@@ -1,0 +1,75 @@
+<nz-steps [nzCurrent]="current">
+    <nz-step *ngFor="let question of questionList;let i = index" [nzStatus]="status[i]" (click)="selectQuestion(question.Id)">
+    </nz-step>
+</nz-steps>
+<br>
+
+<div class="tabs" *ngFor="let question of questionList;let i = index">
+    <!-- <form nz-form [formGroup]="ansForm"> -->
+    <div class="question-body" [hidden]="question.isHidden">
+        <h2>{{i + 1}}. <span [innerHTML]="question.Question"></span></h2>
+        <div class="text">
+            <div *ngFor="let option of question.Answers">
+                <div *ngIf="question.Type==='MultipleChoise'">
+                    <nz-radio-group nzName="radiogroup" [(ngModel)]="questionAnsArray[i]">
+                        <label nz-radio [nzValue]="option"> {{option}}</label>
+                    </nz-radio-group>
+                </div>
+                <div *ngIf="question.Type==='MultiSelect'">
+                    <nz-checkbox-wrapper (nzOnChange)="updateCheckedOptions(option)">
+                        <div nz-row>
+                            <label nz-checkbox [nzValue]="option">
+                                {{option}}
+                            </label>
+                        </div>
+                    </nz-checkbox-wrapper>
+                </div>
+            </div>
+            <div *ngIf="question.Type==='FillinBlank'">
+                <div nz-row [nzGutter]="24" style="padding: 15px;">
+                    <div nz-col nzXs="24" nzSm="24" nzMd="6" mzLg="6" nzXl="6" style="width: 100%;">
+                        <nz-form-item>
+                            <nz-form-control>
+                                <nz-input-group>
+                                    <input nz-input [(ngModel)]="questionAnsArray[i]" nz-input placeholder="Enter answer" #name />
+                                </nz-input-group>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </form> -->
+</div>
+<div class="btn-group">
+    <button nz-button nzType="primary" (click)="backQuestion()">back</button>&nbsp;&nbsp;&nbsp;
+    <button nz-button nzType="primary" (click)="nextQuestion()" *ngIf="current < totalQuestions-1">Next</button>
+    <button nz-button nzType="primary" (click)="submitQuiz()" *ngIf="current === totalQuestions-1">Submit</button>
+</div>
+<style>
+    .text {
+        align-items: center;
+    }
+    
+    .tabs {
+        left: 35%;
+    }
+    
+    .question-body {
+        margin-left: 39%;
+    }
+    
+    .btn-group {
+        margin-left: 150px;
+        padding-top: 15px;
+        padding-inline: 70px;
+        margin-left: 39%;
+    }
+    
+    .inner-content {
+        background: #fff;
+        padding: 24px;
+        height: 950px;
+    }
+</style>

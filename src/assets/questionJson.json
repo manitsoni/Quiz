@@ -1,0 +1,131 @@
+[{
+    "Id": "1001",
+    "Name": "Simple Quiz",
+    "Type": "english",
+    "TotalQuestions": 5,
+    "Questions": [{
+            "Id": 1,
+            "Question": "What is the capital of india?",
+            "Answers": [
+                "Dehli",
+                "Mumbai",
+                "Chennai",
+                "Ahmedabad"
+            ],
+            "CorrectAnswer": "Dehli",
+            "Type": "MultipleChoise",
+            "isHidden": false
+        }, {
+            "Id": 2,
+            "Question": "Which of this following words start with I?",
+            "Answers": [
+                "India",
+                "Indonesia",
+                "Computer",
+                "Ahmedabad"
+            ],
+            "CorrectAnswer": "India,Indonesia",
+            "Type": "MultiSelect",
+            "isHidden": true
+        },
+        {
+            "Id": 3,
+            "Question": "Goa is famous for not producing coconut.",
+            "Answers": [
+                "True",
+                "False"
+            ],
+            "CorrectAnswer": "True",
+            "Type": "MultipleChoise",
+            "isHidden": true
+        },
+        {
+            "Id": 4,
+            "Question": "Which laboratories C language was implemented?",
+            "Answers": [
+
+            ],
+            "CorrectAnswer": "bell",
+            "Type": "FillinBlank",
+            "isHidden": true
+        },
+        {
+            "Id": 5,
+            "Question": "(1*2)+6*10/(15-5) Answer of the followings calculations",
+            "Answers": [
+                "8",
+                "7",
+                "10",
+                "15"
+            ],
+            "CorrectAnswer": "8",
+            "Type": "MultipleChoise",
+            "isHidden": true
+        }
+    ]
+}, {
+    "Id": "1002",
+    "Name": "Simple Quiz",
+    "Type": "hindi",
+    "TotalQuestions": 5,
+    "Questions": [{
+            "Id": 1,
+            "Question": "भारत की राजधानी क्या है",
+            "Answers": [
+                "दिल्ली",
+                "मुंबई",
+                "चेन्नई",
+                "अहमदाबाद"
+            ],
+            "CorrectAnswer": "दिल्ली",
+            "Type": "MultipleChoise",
+            "isHidden": false
+        }, {
+            "Id": 2,
+            "Question": "निम्नलिखित में से कौन सा शब्द I . से शुरू होता है",
+            "Answers": [
+                "इंडिया",
+                "इंडोनेशिया",
+                "कम्प्यूटर",
+                "अहमदाबाद"
+            ],
+            "CorrectAnswer": "इंडिया,इंडोनेशिया",
+            "Type": "MultiSelect",
+            "isHidden": true
+        },
+        {
+            "Id": 3,
+            "Question": "गोवा नारियल का उत्पादन नहीं करने के लिए प्रसिद्ध है",
+            "Answers": [
+                "सत्य",
+                "असत्य"
+            ],
+            "CorrectAnswer": "सत्य",
+            "Type": "MultipleChoise",
+            "isHidden": true
+        },
+        {
+            "Id": 4,
+            "Question": "कौन सी प्रयोगशालाएँ 'C' भाषा लागू की गईं.",
+            "Answers": [
+
+            ],
+            "CorrectAnswer": "बेल",
+            "Type": "FillinBlank",
+            "isHidden": true
+        },
+        {
+            "Id": 5,
+            "Question": "(1*2)+6*10/(15-5) निम्नलिखित गणनाओं के उत्तर ",
+            "Answers": [
+                "8",
+                "7",
+                "10",
+                "15"
+            ],
+            "CorrectAnswer": "8",
+            "Type": "MultipleChoise",
+            "isHidden": true
+        }
+    ]
+}]
