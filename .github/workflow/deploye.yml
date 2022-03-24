@@ -2,7 +2,7 @@
 
 name: Basic Workflow.
 
-on:
+on: 
   push:
     branches:
       - 'master'
